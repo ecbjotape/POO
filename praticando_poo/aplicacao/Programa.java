@@ -13,13 +13,12 @@ public class Programa {
 		retangulo.altura = sc.nextDouble();
 		System.out.println("Digite a largura do retangulo: ");
 		retangulo.largura = sc.nextDouble();
-		System.out.println("Area: "+retangulo.Area());
-		System.out.println("Perimetro: "+retangulo.Perimetro());
-		System.out.println("Diagonal: "+retangulo.Diagonal());
-		
-		
+		System.out.println("Area: " + retangulo.Area());
+		System.out.println("Perimetro: " + retangulo.Perimetro());
+		System.out.println("Diagonal: " + retangulo.Diagonal());
+
 		sc.close();
-		
+
 	}
 
 }
