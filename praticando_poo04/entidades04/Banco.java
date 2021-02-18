@@ -12,6 +12,15 @@ public class Banco {
 		this.saldoConta = saldoConta;
 	}
 	
+	public Banco(int numeroConta, String nomeTitular) {
+		this.numeroConta = numeroConta;
+		this.nomeTitular = nomeTitular;
+	}
+
+	public Banco(double saldoConta) {
+		this.saldoConta = saldoConta;
+	}
+	
 	public double deposito(double valorDepositado){
 		return this.saldoConta += valorDepositado;
 	}
@@ -36,7 +45,10 @@ public class Banco {
 	public void setNomeTitular(String nomeTitular) {
 		this.nomeTitular = nomeTitular;
 	}
-
+	
+	public void setSaldoConta(double saldoConta) {
+		this.saldoConta = saldoConta;
+	}
 	public double getSaldoConta() {
 		return saldoConta;
 	}

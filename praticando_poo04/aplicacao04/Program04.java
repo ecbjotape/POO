@@ -14,18 +14,27 @@ public class Program04 {
 		int numeroConta = sc.nextInt();
 		System.out.println("Digite o nome do titular da conta: ");
 		String nomeTitular = sc.next();
-		System.out.println("Digite um valor inicial a ser depositado (OPCIONAL); ");
-		double saldoConta = sc.nextDouble();
-		Banco banco = new Banco(numeroConta, nomeTitular, saldoConta);
+		Banco banco = new Banco(numeroConta, nomeTitular);
+		System.out.println("1. adicionar valor inicial \n 2. Começar conta sem valor");
+		int opcao = sc.nextInt();
+		if(opcao == 1) {
+			System.out.println("Digite um valor inicial a ser depositado: ");
+			double saldoConta = sc.nextDouble();
+			banco.setSaldoConta(saldoConta);
+		}
+		else {
+			double saldoConta = 0;
+		}
+		
 		System.out.println("Nome; " + banco.getNomeTitular() + " \nNumero da conta: " + banco.getNumeroConta()
 				+ " \nSaldo Atual: " + banco.getSaldoConta());
 		System.out.println("1. Depositar");
 		System.out.println("2. Saque");
 		System.out.println("9. SAIR");
-		int opcao = sc.nextInt();
-		while (opcao != 9) {
+		int opcao2 = sc.nextInt();
+		while (opcao2 != 9) {
 
-			switch (opcao) {
+			switch (opcao2) {
 			case 1:
 				System.out.println("Digite o valor que deseja depositar: ");
 				double valorDepositado = sc.nextDouble();
@@ -34,7 +43,7 @@ public class Program04 {
 				System.out.println("1. Depositar");
 				System.out.println("2. Saque");
 				System.out.println("9. SAIR");
-				opcao = sc.nextInt();
+				opcao2 = sc.nextInt();
 				break;
 			case 2:
 				System.out.println("Digite o valor que deseja sacar: ");
@@ -44,18 +53,19 @@ public class Program04 {
 				System.out.println("1. Depositar");
 				System.out.println("2. Saque");
 				System.out.println("9. SAIR");
-				opcao = sc.nextInt();
+				opcao2 = sc.nextInt();
 				break;
 			default:
 				System.out.println("Codigo invalido!");
 				System.out.println("1. Depositar");
 				System.out.println("2. Saque");
 				System.out.println("9. SAIR");
-				opcao = sc.nextInt();
+				opcao2 = sc.nextInt();
 			}
 
 		}
 		System.out.println("Saindo...");
+		System.exit(0);
 		sc.close();
 	}
 
