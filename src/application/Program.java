@@ -22,13 +22,13 @@ public class Program {
 		int quantidade = sc.nextInt();
 		Product product = new Product(nome, preco, quantidade);
 
-		System.out.println("Dados do produto: " + product.nome + ", R$ " + product.preco + ", unidades "
-				+ product.quantidade + ", Total: R$ " + product.preco * product.quantidade);
+		System.out.println("Dados do produto: " + product.getNome() + ", R$ " + product.getPreco() + ", unidades "
+				+ product.getQuantidade() + ", Total: R$ " + product.getPreco() * product.getQuantidade());
 
 		System.out.println("Digite a quantidade de produtos que deseja adicionar no estoque: ");
 		quantidade = sc.nextInt();
 		product.addProduct(quantidade);
-		System.out.println("Dados atualizados: " + product.nome + ", R$ " + product.preco + ", " + product.quantidade
+		System.out.println("Dados atualizados: " + product.getNome() + ", R$ " + product.getPreco() + ", " + product.getQuantidade()
 				+ ", Total: " + product.totalValueInStock());
 		System.out.println("Digite a quantidade que deseja remover do produto; ");
 		quantidade = sc.nextInt();
